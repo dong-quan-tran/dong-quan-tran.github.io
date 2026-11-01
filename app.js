@@ -133,7 +133,7 @@ const research = {
   VarCNN: [0.6792242105263159,0.6383263157894737,0.6188726315789475,0.5920757894736843,0.5835305263157898],
   RF: [0.7611905263157892,0.6910705263157894,0.6424105263157893,0.6157736842105264,0.593447368421053]
 };
-const colors = ['#b9f5ce','#bccba2','#b3b5da','#d5b992'];
+const colors = ['#8ab4ff','#bccba2','#b3b5da','#d5b992'];
 const schedules = [1,3,5,7,9];
 function renderResearch(index) {
   document.querySelector('#research-bars').innerHTML = Object.entries(research).map(([model,values],i) => `<div class="research-bar"><span>${model}</span><div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--value:${values[index] * 100}%;--bar-color:${colors[i]}"></div></div><span class="bar-value">${(values[index] * 100).toFixed(1)}%</span></div>`).join('');
