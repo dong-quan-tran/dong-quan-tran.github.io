@@ -23,3 +23,8 @@ dialog{background:#191b1f;color:var(--text);border:1px solid #4e5662;border-radi
 
 /* Uppercase monogram proportions. */
 .monogram{font-size:21px;letter-spacing:-2px;line-height:37px}.orbit-core{font-size:40px;letter-spacing:-4px;padding-right:4px}.about-mark>span:nth-child(2){transform:none}
+
+/* Slightly larger main navigation. */
+nav{font-size:15px}
+@media(max-width:780px){nav{font-size:14px}}
+@media(max-width:520px){nav{font-size:12px}}
