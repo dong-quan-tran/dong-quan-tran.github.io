@@ -28,3 +28,37 @@ dialog{background:#191b1f;color:var(--text);border:1px solid #4e5662;border-radi
 nav{font-size:15px}
 @media(max-width:780px){nav{font-size:14px}}
 @media(max-width:520px){nav{font-size:12px}}
+
+/* Readable descriptions throughout the portfolio. */
+.hero-description{font-size:18px;line-height:1.8;max-width:450px}
+.section-heading>p,.project-copy>p,.research-copy>p,.play-copy p,.about-copy p:not(.eyebrow),dialog p{font-size:16px;line-height:1.8}
+.more-grid p,.learning-note p{font-size:15px;line-height:1.8}
+.experience-strip p{font-size:14px;line-height:1.7}
+.research-chart>p{font-size:14px;line-height:1.7}
+.research-chart .chart-note{font-size:12px;line-height:1.8}
+.lab-caption p,.demo-note{font-size:13px;line-height:1.7}
+.lab-bottom{font-size:11px;gap:12px}
+.hero-footnote,.research-timeline small{font-size:13px}
+.research-timeline strong{font-size:15px}
+.tags>span{font-size:11px;padding:5px 9px}
+.text-link{font-size:14px}
+.research-chart>.text-link{font-size:13px}
+.dialog-source{font-size:13px!important}
+.dialog-lede{font-size:18px!important}
+.contact-bottom{font-size:15px}
+@media(max-width:780px){
+ .hero-description{font-size:17px}
+ .section-heading>p,.project-copy>p,.research-copy>p,.play-copy p,.about-copy p:not(.eyebrow),dialog p{font-size:15px}
+ .more-grid p,.learning-note p{font-size:14px}
+ .experience-strip p{font-size:13px}
+ .research-timeline small,.hero-footnote{font-size:12px}
+ .lab-bottom{font-size:10px}
+}
+@media(max-width:520px){
+ .hero-description{font-size:16px}
+ .section-heading>p,.project-copy>p,.research-copy>p,.play-copy p,.about-copy p:not(.eyebrow),dialog p{font-size:16px}
+ .more-grid p,.learning-note p{font-size:15px}
+ .experience-strip p{font-size:14px}
+ .about-links .text-link{font-size:14px}
+ .contact-bottom{font-size:14px}
+}
