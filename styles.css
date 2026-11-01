@@ -62,3 +62,73 @@ nav{font-size:15px}
  .about-links .text-link{font-size:14px}
  .contact-bottom{font-size:14px}
 }
+
+/* Legible section labels, captions, and demo details. */
+.eyebrow,.section-heading .eyebrow{font-size:14px;letter-spacing:1.2px}
+.hero .eyebrow,.about-copy>.eyebrow,.contact-section .eyebrow,.learning-note .eyebrow,.play-copy .eyebrow,.experience-strip .eyebrow,.dialog-top .eyebrow{font-size:12px;letter-spacing:1px}
+.orbit-label{font-size:12px;letter-spacing:0}
+.label-a{top:38px}.label-b{left:max(8px,calc(50% - 145px));top:187px}.label-c{left:auto;right:16px;top:178px}
+.hero-bottom{font-size:12px;letter-spacing:1px;gap:10px}
+.lab-top,.lab-tabs button{font-size:12px}
+.lab-caption>.mono{font-size:11px;letter-spacing:1.4px}
+.lab-bottom{font-size:12px}
+.project-meta,.research-label{font-size:12px;letter-spacing:.8px}
+.tags>span{font-size:12px}
+.project-art{height:340px;padding:22px}
+.art-toolbar{font-size:12px;gap:8px}.art-tag{font-size:10px;letter-spacing:0;padding:4px}
+.url-field{font-size:12px;gap:6px;padding:11px 8px}
+.risk-layout{gap:20px}.signal-list{font-size:12px;gap:10px;line-height:1.5}
+.risk-ring small{font-size:10px}
+.art-footer{font-size:10px;letter-spacing:.5px;left:22px;right:22px}
+.query-prompt{font-size:13px}.code-preview{font-size:13px;padding:14px 8px}
+.query-status{font-size:11px;gap:9px;flex-wrap:wrap}
+.order-labels{font-size:11px;letter-spacing:0}.order-book>div>span{font-size:12px}
+.mail-snippet>span{font-size:10px}.mail-snippet p{font-size:16px}
+.deadline-arrow span{font-size:11px}.deadline-card>div strong{font-size:12px}.deadline-card>div span{font-size:11px}.calendar-icon{font-size:10px}.review-pill{font-size:11px}
+.chart-heading,.data-badge{font-size:11px}.research-bar{font-size:13px;grid-template-columns:58px 1fr 48px}
+.slider-heading{font-size:13px}.range-labels{font-size:11px}.research-timeline>a>span{font-size:12px}
+.more-work summary>.mono,.more-grid a>span{font-size:11px;letter-spacing:.5px}
+.play-sticker,.rift .play-sticker{font-size:10px;letter-spacing:.5px}
+.about-mark small{font-size:11px}.copy-button{font-size:13px}
+.demo-select,.demo-code,.demo-table{font-size:13px}.market-event,.replay-button{font-size:12px}
+footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5px}
+@media(max-width:1050px){
+ .art-tag{display:none}.risk-layout{gap:14px}.risk-ring{width:78px;height:78px}
+ .signal-list{font-size:11px}.url-field{font-size:11px}.query-status>span:last-child{display:none}
+ .project-meta{font-size:11px}.deadline-card{gap:9px}.review-pill{display:none}
+ .play-copy .eyebrow{font-size:10px}.play-sticker,.rift .play-sticker{font-size:8px}
+}
+@media(max-width:780px){
+ .hero-bottom{flex-wrap:wrap}.hero-bottom>span:last-child{flex-basis:100%;text-align:left;max-width:none;font-size:12px}
+ .section-heading .eyebrow{font-size:13px}.project-meta{font-size:10px;letter-spacing:.3px}
+ .project-art{height:350px;padding:18px}.art-footer{left:18px;right:18px;font-size:9px}
+ .url-field{font-size:10px}.risk-layout{gap:10px}.risk-ring{width:65px;height:65px}.risk-ring small{font-size:9px}
+ .signal-list{font-size:11px}.signal-list i{margin-right:4px}
+ .code-preview{font-size:12px}.query-prompt{font-size:12px}.query-status{font-size:10px}
+ .order-labels{font-size:10px}.order-book>div>span{font-size:11px}
+ .deadline-card>div strong{font-size:11px}.deadline-card>div span{font-size:10px}
+ .play-copy .eyebrow{font-size:10px}.play-sticker,.rift .play-sticker{font-size:8px;padding:4px}
+}
+@media(max-width:520px){
+ .eyebrow,.hero .eyebrow,.about-copy>.eyebrow,.contact-section .eyebrow,.learning-note .eyebrow,.play-copy .eyebrow,.experience-strip .eyebrow{font-size:12px;letter-spacing:.7px}
+ .project-meta{font-size:11px;letter-spacing:.3px}.project-art{height:350px;padding:20px}
+ .url-field{font-size:11px}.signal-list{font-size:12px}.risk-layout{gap:14px}.risk-ring{width:75px;height:75px}
+ .art-footer{left:20px;right:20px;font-size:9px}
+ .art-tag{display:none}.art-toolbar{font-size:12px}
+ .query-prompt{font-size:13px}.code-preview{font-size:13px}.query-status{font-size:11px}
+ .order-labels{font-size:10px}.order-book>div>span{font-size:12px}
+ .deadline-card>div strong{font-size:12px}.deadline-card>div span{font-size:11px}
+ .chart-heading,.data-badge{font-size:10px}.more-work summary>.mono{font-size:10px}
+ .play-sticker,.rift .play-sticker{font-size:10px;padding:5px 9px}
+ footer{font-size:12px}
+}
+@media(max-width:360px){
+ .signal-list{font-size:11px}.risk-ring{width:62px;height:62px}.risk-layout{gap:10px}
+ .url-field{font-size:10px}.project-meta{font-size:10px}
+ .chart-heading{flex-wrap:wrap}.more-work summary{flex-wrap:wrap}
+ .hero .eyebrow{font-size:11px}.lab-tabs button{font-size:11px}
+}
+
+.label-c{left:calc(50% + 130px);right:auto}
+@media(max-width:520px){.label-c{left:auto;right:16px}.risk-ring small{font-size:9px;letter-spacing:-.4px}}
+@media(max-width:360px){.risk-ring small{font-size:8px}}
