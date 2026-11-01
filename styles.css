@@ -20,3 +20,6 @@ dialog{background:#191f1a;color:var(--text);border:1px solid #53624e;border-radi
 @media(max-width:520px){.experience-strip{grid-template-columns:1fr;gap:22px}.experience-strip h3{font-size:16px}.experience-strip .eyebrow{font-size:8px}.experience-strip p{font-size:12px}.about-links{gap:20px}.about-links .text-link{font-size:12px}}
 @media(max-width:520px){.hero h1{font-size:clamp(48px,15.6vw,61px)}.hero-copy,.signal-lab{min-width:0}.label-c{left:auto;right:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Uppercase monogram proportions. */
+.monogram{font-size:21px;letter-spacing:-2px;line-height:37px}.orbit-core{font-size:40px;letter-spacing:-4px;padding-right:4px}.about-mark>span:nth-child(2){transform:none}
