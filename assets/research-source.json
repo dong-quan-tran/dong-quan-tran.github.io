@@ -1,0 +1,8 @@
+﻿{
+    "commit":  "c27dc08450719571dabbd70a108bf6f3feadf403",
+    "repository":  "Website-Fingerprinting-Tamaraw-trade-off-in-One-page-setting-Phase-2-Summer-2026-REU",
+    "source":  "https://raw.githubusercontent.com/dong-quan-tran/Website-Fingerprinting-Tamaraw-trade-off-in-One-page-setting-Phase-2-Summer-2026-REU/c27dc08450719571dabbd70a108bf6f3feadf403/results/merged/onepage_all_schedules.csv",
+    "selection":  "legacyPadl100_pin0p015_pout0p045_L1_G{1,3,5,7,9}",
+    "metric":  "Accuracy",
+    "pages":  95
+}
