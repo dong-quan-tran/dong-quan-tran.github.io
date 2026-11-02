@@ -11,7 +11,7 @@ const projects = {
     decision: 'Keep the server in charge of game rules. Camera tracking provides player input, while the server validates actions and resolves combat. Optional AI advice cannot change the rules or outcomes.',
     evidence: 'I led a four-person team at HackTX 2026. The repository includes PvP, bot practice, calibration, sandbox modes, and keyboard controls. The live game is hosted on Vultr.',
     flow: 'Chess move -> capture attempt -> webcam-controlled duel -> server-validated result',
-    repo: 'LetHimRook-HackTX26', demo: 'https://pawnhub.tech/', demoLabel: 'Play now',
+    repo: 'LetHimRook-HackTX26', linkedin: 'https://lnkd.in/p/gap5sGcY', demo: 'https://pawnhub.tech/', demoLabel: 'Play now',
     scope: 'A hackathon prototype. Tracking quality depends on lighting, framing, browser, and hardware.'
   },
   blink: {
