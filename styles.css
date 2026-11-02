@@ -205,3 +205,31 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 .project-actions a:last-child{color:var(--text)}
 .project-actions a:hover{background:#8ab4ff12;border-color:var(--accent);text-decoration:none}
 .project-art{cursor:pointer}
+
+/* Destinations live inside the visual panel; hover reveals a short overview. */
+.project-art{height:420px}
+.project-art:hover,.play-card:hover{transform:none}
+.play-art{height:320px}
+.card-destinations{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:14px 20px;background:#10141cf5;border-top:1px solid #4c596d66}
+.card-destinations .project-actions{margin:0;gap:8px}
+.card-destinations .project-actions a{font-size:13px;min-height:40px;padding:8px 11px}
+.project-art .art-footer{bottom:91px}
+.play-sticker,.rift .play-sticker{bottom:90px}
+.morse{bottom:92px}
+.card-reveal{position:absolute;inset:0 0 84px;z-index:2;display:flex;flex-direction:column;justify-content:center;gap:15px;padding:26px;background:#10141cf7;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.card-reveal .eyebrow{font-size:12px;letter-spacing:.8px;color:var(--accent)}
+.card-reveal p{font-size:16px;line-height:1.75;color:var(--text)}
+.reveal-hint{font-size:13px;color:var(--muted)}
+.project-card:has(.card-open:focus-visible) .card-reveal,.play-card:has(.card-open:focus-visible) .card-reveal{opacity:1}
+@media(hover:hover) and (pointer:fine){.project-card:has(.card-open:hover) .card-reveal,.play-card:has(.card-open:hover) .card-reveal{opacity:1}}
+@media(max-width:1050px){.play-art{height:350px}.play-card .card-reveal{padding:20px}.play-card .card-reveal p{font-size:15px;line-height:1.65}.card-destinations{padding:13px 16px}.card-destinations .project-actions a{font-size:12px;padding:8px 10px}}
+@media(max-width:780px){.project-art{height:420px}.card-reveal{padding:22px}.card-reveal p{font-size:15px}}
+@media(max-width:520px){.play-art{height:320px}.project-art{height:420px}.play-card .card-reveal p{font-size:16px}.card-destinations{padding:14px 16px}.card-destinations .project-actions a{font-size:13px}.play-sticker,.rift .play-sticker{bottom:90px}.morse{bottom:92px}}
+@media(max-width:360px){.due .art-footer{bottom:133px}.due .card-reveal{bottom:128px}.card-destinations .project-actions a{font-size:12px;padding:8px 9px}}
+
+.card-destinations{pointer-events:none}.card-destinations a{pointer-events:auto}
+.project-card:has(.card-destinations a:hover) .card-reveal,.play-card:has(.card-destinations a:hover) .card-reveal{opacity:0}
+
+@media(min-width:521px) and (max-width:780px){.due .art-footer{bottom:133px}.due .card-reveal{bottom:128px}}
+
+@media(min-width:521px) and (max-width:780px){.play-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.play-art{height:380px}}
