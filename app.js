@@ -43,7 +43,7 @@ const projects = {
     decision: 'Require a review before external calendar changes. Conflicting dates become proposals, and accepted changes retain the previous deadline in history.',
     evidence: 'The public demo uses sample data. Real integrations require a privately configured instance. The linked repository documents what works locally and what remains early beta.',
     flow: 'Source → evidence + date extraction → conflict check → review → approved export',
-    repo: 'DueScope-HackRice16', demo: 'https://due-scope-hack-rice.vercel.app/demo',
+    repo: 'DueScope-HackRice16', linkedin: 'https://lnkd.in/p/gvRdyX3w', demo: 'https://due-scope-hack-rice.vercel.app/demo',
     scope: 'Both DueScope repositories are presented as one project. The homepage shows a sample workflow, not a personal inbox.'
   }
 };
@@ -62,6 +62,7 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
       <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">Sample-data demo ↗</a>` : ''}</div>
+      ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn &#8599;</a>` : ''}
       <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
     dialog.scrollTop = 0;
