@@ -255,3 +255,8 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 .phase-actions.project-actions{margin:0}
 .phase-actions a{white-space:nowrap}
 @media(max-width:520px){.research-phase{column-gap:10px}.research-timeline .phase-main{gap:10px}.phase-actions a{font-size:12px;padding:8px 10px}.research-timeline .phase-main strong{font-size:14px}.research-timeline .phase-main small{font-size:12px}}
+
+/* Research rows are informational; only their action buttons navigate. */
+.research-phase .phase-main{cursor:default}
+.phase-actions.project-actions{flex-wrap:nowrap;gap:8px}
+@media(max-width:520px){.research-phase{grid-template-columns:minmax(0,1fr)}.research-phase .phase-main{padding-bottom:9px}.phase-actions.project-actions{justify-self:start;margin:0 0 15px 39px}}
