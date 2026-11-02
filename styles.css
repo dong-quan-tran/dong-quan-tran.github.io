@@ -276,3 +276,5 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 #work{border-top:1px solid var(--line)}
 @media(max-width:780px){.about-section{padding-top:48px;padding-bottom:40px}.about-copy h1{font-size:40px}}
 @media(max-width:520px){.about-section{padding-top:32px;gap:28px}.about-copy h1{font-size:39px}}
+
+#work-title.eyebrow{font-size:14px;letter-spacing:1.2px;line-height:1.6;margin:0;color:var(--accent)}
