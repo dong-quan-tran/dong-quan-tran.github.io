@@ -149,39 +149,51 @@ renderResearch(0);
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 
-// One continuous position marker, rather than per-card pagination.
+// Always-visible horizontal projects with dot-and-pill navigation.
 const moreTrack = document.querySelector('#more-projects-track');
-const morePosition = document.querySelector('#more-projects-position');
-const moreDisclosure = document.querySelector('.more-work');
+const moreDots = [...document.querySelectorAll('.more-dot')];
+const morePrevious = document.querySelector('#more-prev');
+const moreNext = document.querySelector('#more-next');
+let moreActivePosition = 0;
 function updateMorePosition() {
   const maximum = Math.max(0, moreTrack.scrollWidth - moreTrack.clientWidth);
-  const progress = maximum ? Math.min(100, Math.max(0, moreTrack.scrollLeft / maximum * 100)) : 0;
-  morePosition.value = progress;
-  morePosition.disabled = maximum === 0;
-  morePosition.setAttribute('aria-valuetext', `${Math.round(progress)} percent scrolled`);
+  const ratio = maximum ? Math.max(0, Math.min(1, moreTrack.scrollLeft / maximum)) : 0;
+  moreActivePosition = Math.round(ratio * (moreDots.length - 1));
+  moreDots.forEach((dot, index) => {
+    const active = index === moreActivePosition;
+    dot.classList.toggle('active', active);
+    if (active) dot.setAttribute('aria-current', 'step');
+    else dot.removeAttribute('aria-current');
+    dot.disabled = maximum === 0;
+  });
+  morePrevious.disabled = maximum === 0 || moreTrack.scrollLeft <= 1;
+  moreNext.disabled = maximum === 0 || moreTrack.scrollLeft >= maximum - 1;
 }
+function goToMorePosition(index) {
+  const maximum = Math.max(0, moreTrack.scrollWidth - moreTrack.clientWidth);
+  const target = Math.max(0, Math.min(moreDots.length - 1, index));
+  moreTrack.scrollTo({
+    left: maximum * target / (moreDots.length - 1),
+    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+  });
+}
+moreDots.forEach((dot, index) => dot.addEventListener('click', () => goToMorePosition(index)));
+morePrevious.addEventListener('click', () => goToMorePosition(moreActivePosition - 1));
+moreNext.addEventListener('click', () => goToMorePosition(moreActivePosition + 1));
 let moreScrollFrame = 0;
 moreTrack.addEventListener('scroll', () => {
   if (moreScrollFrame) return;
   moreScrollFrame = requestAnimationFrame(() => { moreScrollFrame = 0; updateMorePosition(); });
 }, { passive: true });
-morePosition.addEventListener('input', () => {
-  const maximum = Math.max(0, moreTrack.scrollWidth - moreTrack.clientWidth);
-  moreTrack.scrollTo({ left: maximum * Number(morePosition.value) / 100, behavior: 'instant' });
-});
 moreTrack.addEventListener('keydown', event => {
   if (event.target !== moreTrack) return;
-  const width = moreTrack.firstElementChild.getBoundingClientRect().width;
-  const gap = parseFloat(getComputedStyle(moreTrack).gap) || 0;
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
     event.preventDefault();
-    moreTrack.scrollBy({ left: (width + gap) * (event.key === 'ArrowRight' ? 1 : -1), behavior: reduced ? 'instant' : 'smooth' });
+    goToMorePosition(moreActivePosition + (event.key === 'ArrowRight' ? 1 : -1));
   } else if (event.key === 'Home' || event.key === 'End') {
     event.preventDefault();
-    moreTrack.scrollTo({ left: event.key === 'Home' ? 0 : moreTrack.scrollWidth, behavior: reduced ? 'instant' : 'smooth' });
+    goToMorePosition(event.key === 'Home' ? 0 : moreDots.length - 1);
   }
 });
-moreDisclosure.addEventListener('toggle', () => requestAnimationFrame(updateMorePosition));
 new ResizeObserver(updateMorePosition).observe(moreTrack);
 updateMorePosition();

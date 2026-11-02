@@ -332,3 +332,22 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 /* Slightly larger name and email introduction. */
 .about-copy>.eyebrow{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
 @media(max-width:520px){.about-copy>.eyebrow{font-size:13px}}
+
+/* More Projects is always visible, with one arrow at each end of the navigator. */
+.more-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0}
+.more-heading h3{font-size:18px;line-height:1.4}
+.more-heading>.mono{font-size:11px;color:var(--muted)}
+.more-grid{scroll-snap-type:none}
+.more-navigator{display:flex;align-items:center;justify-content:center;gap:20px;padding:8px 0 24px}
+.more-arrow{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid #465268;border-radius:50%;background:transparent;color:var(--text)}
+.more-arrow svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.more-arrow:hover:not(:disabled){border-color:var(--accent);color:var(--accent);background:#8ab4ff12}
+.more-arrow:disabled{opacity:.3;cursor:default}
+.more-dots{display:flex;align-items:center;gap:7px}
+.more-dot{display:grid;place-items:center;width:24px;height:36px;padding:0;border:0;background:transparent;border-radius:6px;transition:width .18s ease}
+.more-dot::before{content:'';display:block;width:8px;height:8px;border-radius:99px;background:#69768e;transition:width .18s ease,background .18s ease}
+.more-dot.active{width:38px}
+.more-dot.active::before{width:30px;background:var(--accent)}
+.more-dot:hover::before{background:#a1aec2}
+.more-dot.active:hover::before{background:var(--accent)}
+@media(max-width:520px){.more-navigator{gap:9px}.more-arrow{width:32px;height:32px;flex-basis:32px}.more-dots{gap:3px}.more-dot{width:20px}.more-dot.active{width:30px}.more-dot.active::before{width:26px}.more-heading h3{font-size:17px}}
