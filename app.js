@@ -2,6 +2,88 @@
 
 const github = 'https://github.com/dong-quan-tran/';
 const projects = {
+  aegis: {
+    "name": "AegisLog",
+    "category": "SECURITY / LOG ANALYSIS",
+    "lede": "Turn noisy logs into incidents worth investigating.",
+    "problem": "Authentication and web logs contain useful evidence, but related events can be scattered across thousands of entries.",
+    "build": "A Python pipeline normalizes SSH, Apache, JSONL, and syslog events. FastAPI and a React interface support incident grouping, investigation, and optional AI explanations.",
+    "decision": "Group related events into incidents and keep structured evidence available alongside the explanation.",
+    "evidence": "The repository documents normalization, source adapters, CLI and API workflows, and automated tests. Optional AI explanations depend on the configured backend.",
+    "flow": "Raw logs -> normalized events -> grouped incidents -> evidence and explanations",
+    "repo": "AegisLog",
+    "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "scikit-learn",
+        "Pytest"
+    ],
+    "scope": "An analysis and triage project. Results depend on the supplied logs and configuration."
+},
+  cloud: {
+    "name": "CloudLink",
+    "category": "AWS / NETWORK TROUBLESHOOTING",
+    "lede": "Make a failed connection easier to investigate.",
+    "problem": "An unreachable service can have a routing, firewall, port, or application problem. CloudLink brings the first diagnostic checks together.",
+    "build": "An AWS Academy lab tests connectivity between configured instances using ping, HTTP, HTTPS, an SSH banner check, and custom TCP ports. Results include a suggested next check.",
+    "decision": "Run read-only checks from the selected source instance. Explain what each protocol-specific result means without changing the network.",
+    "evidence": "The README records manual baseline checks for ping and TCP port 8080. It distinguishes those checks from the newer hosted setup, which still needs end-to-end verification.",
+    "flow": "Choose instances -> run a connectivity check -> interpret the result -> suggested next step",
+    "repo": "cloudlink",
+    "stack": [
+        "AWS",
+        "VPC",
+        "EC2",
+        "Python",
+        "ICMP",
+        "TCP",
+        "HTTP"
+    ],
+    "scope": "A configured lab prototype, not an account-wide network monitoring service."
+},
+  lumen: {
+    "name": "Lumen",
+    "category": "TEAM PROJECT / FULL STACK",
+    "lede": "Explore markets and portfolio accounting through paper trading.",
+    "problem": "A paper-trading workflow needs consistent market data, order handling, and portfolio accounting without placing real trades.",
+    "build": "A Next.js frontend connects to a Python FastAPI backend for equities and crypto data, simulated market orders, positions, and portfolio values. The repository also documents PostgreSQL persistence.",
+    "decision": "Keep the client connected to backend APIs for trading and accounting, with caching and fallback data fetching to manage provider load.",
+    "evidence": "The repository documents the frontend/backend monorepo, market data providers, account and position workflows, and local setup.",
+    "flow": "Market data -> simulated order -> account and position updates -> portfolio dashboard",
+    "repo": "Lumen-Trading-Platform",
+    "stack": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "SQLAlchemy",
+        "PostgreSQL",
+        "yfinance",
+        "Binance API"
+    ],
+    "scope": "A team paper-trading project. It does not execute real trades."
+},
+  flight: {
+    "name": "JSBSim",
+    "category": "COURSE PROJECT / JAVA",
+    "lede": "Extend a flight simulator through a shared engineering project.",
+    "problem": "A class-wide flight simulation project provides a setting for turning requirements and aircraft specifications into working software.",
+    "build": "The CSE 3310 project reimplements a Java desktop flight simulation tool and extends it with an XML-configured F-16 aircraft model covering aerodynamics, mass, controls, and engine behavior.",
+    "decision": "Represent the aircraft through structured model configuration while working within a shared course codebase.",
+    "evidence": "The README identifies the Fall 2025 Fundamentals of Software Engineering course and documents Maven commands for compiling, testing, packaging, and launching the application.",
+    "flow": "Aircraft configuration -> flight dynamics model -> desktop simulation",
+    "repo": "jsbsimedit2",
+    "stack": [
+        "Java",
+        "Maven",
+        "XML",
+        "JSBSim",
+        "Git"
+    ],
+    "scope": "A class-wide course project. This entry describes the shared project scope, not sole authorship."
+},
 
   chess: {
     displayCategory: "SOFTWARE / COMPUTER VISION / HACKTX 2026",

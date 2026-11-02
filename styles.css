@@ -362,3 +362,10 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 /* Matching section heading sizes. */
 #work-title.eyebrow,#research-title.eyebrow{font-size:22px;letter-spacing:1.2px;line-height:1.5}
 @media(max-width:520px){#work-title.eyebrow,#research-title.eyebrow{font-size:18px;letter-spacing:1px}}
+
+/* Uniform More Projects cards, with category labels outside their borders. */
+.more-grid>.more-item{display:flex;flex-direction:column;padding:0;border:0;background:none;min-width:0}
+.more-item>.more-project{display:flex;flex:1;flex-direction:column;min-height:248px;padding:23px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+.more-grid .more-category{font-family:var(--mono);font-size:12px;letter-spacing:.7px;line-height:1.6;min-height:3.2em;margin:12px 0 0;color:var(--accent)}
+@media(max-width:780px){.more-item>.more-project{padding:21px}}
+@media(max-width:520px){.more-item>.more-project{min-height:265px}.more-grid .more-category{font-size:11px}}
