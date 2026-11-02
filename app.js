@@ -2,6 +2,40 @@
 
 const github = 'https://github.com/dong-quan-tran/';
 const projects = {
+
+  chess: {
+    name: 'Let Him Rook', category: 'HackTX 2026 / Team project / Multiplayer',
+    lede: 'Plan your move. Fight for the capture.',
+    problem: 'What if capturing a chess piece required winning a real-time battle? Let Him Rook turns chess into a physical, shared experience controlled through a webcam.',
+    build: 'React, TypeScript, and Three.js render the board and arenas. MediaPipe tracks hands and body movement locally. A Node.js server validates moves and combat over WebSockets, with optional Muse Spark advice.',
+    decision: 'Keep the server in charge of game rules. Camera tracking provides player input, while the server validates actions and resolves combat. Optional AI advice cannot change the rules or outcomes.',
+    evidence: 'I led a four-person team at HackTX 2026. The repository includes PvP, bot practice, calibration, sandbox modes, and keyboard controls. The live game is hosted on Vultr.',
+    flow: 'Chess move -> capture attempt -> webcam-controlled duel -> server-validated result',
+    repo: 'LetHimRook-HackTX26', demo: 'https://pawnhub.tech/', demoLabel: 'Play now',
+    scope: 'A hackathon prototype. Tracking quality depends on lighting, framing, browser, and hardware.'
+  },
+  blink: {
+    name: 'BlinkChilling', category: 'RowdyHacks XII / Team project / Accessibility',
+    lede: 'A blink becomes a letter. A letter becomes a message.',
+    problem: 'Speaking or typing is not always possible. BlinkChilling explores intentional eye blinks as an alternative way to compose and confirm messages.',
+    build: 'Python, OpenCV, and MediaPipe track eye landmarks. A calibrated blink state machine recognizes shortcuts and Morse input. A Flask interface supports shortcut editing and a local text room.',
+    decision: 'Keep the user in control of the final message. Corrections are optional, and the camera is processed locally. Only confirmed text is shared with the text room.',
+    evidence: 'Built as a team prototype for RowdyHacks XII. The project documents calibration, blink timing, local messaging, and tests for decoding and correction choices.',
+    flow: 'Webcam -> eye landmarks -> blink patterns -> message review -> confirmed text',
+    repo: 'BlinkChilling-RowdyHacksXII', linkedin: 'https://lnkd.in/p/gCyKhfMy',
+    scope: 'Alerts are simulated. This prototype does not call emergency services and is not a medical device.'
+  },
+  rift: {
+    name: 'PhaseRift', category: 'Browser game / Three.js / Multiplayer',
+    lede: 'A browser FPS with another way through.',
+    problem: 'PhaseRift explores how portals and real-time multiplayer combat can work together in a browser game.',
+    build: 'Three.js renders the 3D world, while Node.js and WebSocket networking synchronize game state and combat.',
+    decision: 'Connect portal movement and hitscan combat to shared real-time game state.',
+    evidence: 'The repository describes a browser multiplayer FPS with portals, hitscan combat, and synchronized state. Explore the source for implementation details.',
+    flow: 'Player input -> networked game state -> combat and portals -> 3D rendering',
+    repo: 'phaserift',
+    scope: 'An experimental project. No public deployment URL is listed in the repository metadata.'
+  },
   sentinel: {
     name: 'SentinelTI', category: 'Security · Applied ML · Full stack',
     lede: 'A URL risk assessment should explain itself.',
