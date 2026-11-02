@@ -351,3 +351,10 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .more-dot:hover::before{background:#a1aec2}
 .more-dot.active:hover::before{background:var(--accent)}
 @media(max-width:520px){.more-navigator{gap:9px}.more-arrow{width:32px;height:32px;flex-basis:32px}.more-dots{gap:3px}.more-dot{width:20px}.more-dot.active{width:30px}.more-dot.active::before{width:26px}.more-heading h3{font-size:17px}}
+
+/* Original profile portrait and a simpler academic research heading. */
+.about-portrait{margin:0;width:100%;max-width:400px;min-width:0;justify-self:center}
+.about-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--line);border-radius:8px}
+#research-title.eyebrow{font-size:22px;letter-spacing:1.2px;line-height:1.5;margin:0;color:var(--accent)}
+@media(max-width:780px){.about-portrait{max-width:350px}}
+@media(max-width:520px){.about-portrait{max-width:280px}#research-title.eyebrow{font-size:18px;letter-spacing:1px}}
