@@ -147,3 +147,41 @@ document.querySelector('#schedule').addEventListener('input', event => renderRes
 renderResearch(0);
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+
+// One continuous position marker, rather than per-card pagination.
+const moreTrack = document.querySelector('#more-projects-track');
+const morePosition = document.querySelector('#more-projects-position');
+const moreDisclosure = document.querySelector('.more-work');
+function updateMorePosition() {
+  const maximum = Math.max(0, moreTrack.scrollWidth - moreTrack.clientWidth);
+  const progress = maximum ? Math.min(100, Math.max(0, moreTrack.scrollLeft / maximum * 100)) : 0;
+  morePosition.value = progress;
+  morePosition.disabled = maximum === 0;
+  morePosition.setAttribute('aria-valuetext', `${Math.round(progress)} percent scrolled`);
+}
+let moreScrollFrame = 0;
+moreTrack.addEventListener('scroll', () => {
+  if (moreScrollFrame) return;
+  moreScrollFrame = requestAnimationFrame(() => { moreScrollFrame = 0; updateMorePosition(); });
+}, { passive: true });
+morePosition.addEventListener('input', () => {
+  const maximum = Math.max(0, moreTrack.scrollWidth - moreTrack.clientWidth);
+  moreTrack.scrollTo({ left: maximum * Number(morePosition.value) / 100, behavior: 'instant' });
+});
+moreTrack.addEventListener('keydown', event => {
+  if (event.target !== moreTrack) return;
+  const width = moreTrack.firstElementChild.getBoundingClientRect().width;
+  const gap = parseFloat(getComputedStyle(moreTrack).gap) || 0;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+    event.preventDefault();
+    moreTrack.scrollBy({ left: (width + gap) * (event.key === 'ArrowRight' ? 1 : -1), behavior: reduced ? 'instant' : 'smooth' });
+  } else if (event.key === 'Home' || event.key === 'End') {
+    event.preventDefault();
+    moreTrack.scrollTo({ left: event.key === 'Home' ? 0 : moreTrack.scrollWidth, behavior: reduced ? 'instant' : 'smooth' });
+  }
+});
+moreDisclosure.addEventListener('toggle', () => requestAnimationFrame(updateMorePosition));
+new ResizeObserver(updateMorePosition).observe(moreTrack);
+updateMorePosition();

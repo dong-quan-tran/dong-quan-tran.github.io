@@ -304,3 +304,27 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 @media(max-width:360px){.project-card.chess .card-reveal{bottom:128px}.project-card.chess .art-footer{bottom:133px}}
 
 .project-card.blink .project-art{place-items:normal}.project-card.blink .art-toolbar{width:100%}
+
+/* More Projects: a native horizontal strip with a subdued dot-and-line track. */
+.more-grid{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;scrollbar-width:none;padding:4px 4px 18px;margin-inline:-4px}
+.more-grid::-webkit-scrollbar{display:none}
+.more-grid>*{flex:0 0 calc((100% - 40px)/2.5);scroll-snap-align:start;min-width:0;min-height:248px}
+.more-grid>.more-project,.more-grid>a{display:flex;flex-direction:column;padding:23px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.more-grid h3{font-size:23px;line-height:1.25;letter-spacing:-.4px}
+.more-grid p{font-size:16px;line-height:1.8;margin:14px 0 20px}
+.more-grid .project-actions{margin-top:auto;padding-top:8px}
+.more-grid>a>span{margin-top:auto;font-size:11px;line-height:1.6}
+.more-scroll-controls{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:8px 0 24px}
+.more-scroll-controls label{font-size:12px;color:var(--muted)}
+input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;flex:none;width:180px;max-width:45%;height:26px;margin:0;padding:0;border:0;border-radius:0;background:transparent;cursor:ew-resize;accent-color:#69768e}
+.more-scroll-track::-webkit-slider-runnable-track{height:2px;background:#344055;border-radius:2px}
+.more-scroll-track::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;margin-top:-5px;border:0;border-radius:50%;background:#69768e;box-shadow:0 0 0 3px var(--bg)}
+.more-scroll-track::-moz-range-track{height:2px;background:#344055;border-radius:2px}
+.more-scroll-track::-moz-range-progress{height:2px;background:#344055}
+.more-scroll-track::-moz-range-thumb{width:12px;height:12px;border:0;border-radius:50%;background:#69768e;box-shadow:0 0 0 3px var(--bg)}
+.more-scroll-track:hover::-webkit-slider-thumb{background:#8a98ad}
+.more-scroll-track:hover::-moz-range-thumb{background:#8a98ad}
+@media(max-width:780px){.more-grid>*{flex-basis:min(82%,340px)}.more-grid>.more-project,.more-grid>a{padding:21px}.more-grid h3{font-size:22px}}
+@media(max-width:520px){.more-grid{gap:14px}.more-grid>*{flex-basis:86%;min-height:265px}.more-scroll-controls{gap:15px}.more-scroll-controls label{font-size:12px}}
+
+.more-grid{scroll-padding-inline:4px}
