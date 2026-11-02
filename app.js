@@ -4,6 +4,9 @@ const github = 'https://github.com/dong-quan-tran/';
 const projects = {
 
   chess: {
+    displayCategory: "SOFTWARE / COMPUTER VISION / HACKTX 2026",
+    summary: "Chess captures become webcam-controlled battles. Even a pawn can fight back.",
+    stack: ["TypeScript", "React", "Three.js", "React Three Fiber", "MediaPipe", "Node.js", "WebSockets", "Vite", "Vultr", "Muse Spark"],
     name: 'Let Him Rook', category: 'HackTX 2026 / Team project / Multiplayer',
     lede: 'Plan your move. Fight for the capture.',
     problem: 'What if capturing a chess piece required winning a real-time battle? Let Him Rook turns chess into a physical, shared experience controlled through a webcam.',
@@ -15,6 +18,9 @@ const projects = {
     scope: 'A hackathon prototype. Tracking quality depends on lighting, framing, browser, and hardware.'
   },
   blink: {
+    displayCategory: "COMPUTER VISION / ACCESSIBILITY / ROWDYHACKS XII",
+    summary: "A blink becomes a letter. A letter becomes a way to communicate.",
+    stack: ["Python", "OpenCV", "MediaPipe", "Flask", "JavaScript", "Morse decoding", "SymSpell", "Pytest"],
     name: 'BlinkChilling', category: 'RowdyHacks XII / Team project / Accessibility',
     lede: 'A blink becomes a letter. A letter becomes a message.',
     problem: 'Speaking or typing is not always possible. BlinkChilling explores intentional eye blinks as an alternative way to compose and confirm messages.',

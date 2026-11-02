@@ -287,3 +287,20 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 .art-toolbar .card-title{font-family:var(--font);font-size:34px;font-weight:500;line-height:1.2;letter-spacing:-1px}
 @media(max-width:780px){.art-toolbar .card-title{font-size:29px}}
 @media(max-width:520px){.art-toolbar .card-title{font-size:32px}}
+
+/* Promote the two hackathon projects into the featured grid. */
+.project-card.chess .project-art,.project-card.blink .project-art{height:420px;display:block;padding:22px}
+.project-card.chess .chess-piece{top:55px;font-size:175px;left:calc(50% - 70px)}
+.project-card.chess .chess-small{right:22%;bottom:125px;font-size:95px}
+.project-card.chess .play-sticker{left:22px;bottom:128px}
+.project-card.blink .play-art svg{position:absolute;top:85px;left:15%;width:70%;height:170px}
+.project-card.blink .morse{bottom:133px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.more-project{position:relative;isolation:isolate;padding:18px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.more-project:has(.card-open:hover){border-color:var(--accent)}
+.more-project .project-actions{margin-top:16px}
+.more-project .project-actions a{padding:8px 11px;font-size:13px}
+@media(max-width:780px){.project-card.chess .project-art,.project-card.blink .project-art{padding:18px}.project-card.chess .chess-small{right:12%;font-size:80px}}
+@media(max-width:520px){.project-card.chess .project-art,.project-card.blink .project-art{padding:20px}}
+@media(max-width:360px){.project-card.chess .card-reveal{bottom:128px}.project-card.chess .art-footer{bottom:133px}}
+
+.project-card.blink .project-art{place-items:normal}.project-card.blink .art-toolbar{width:100%}
