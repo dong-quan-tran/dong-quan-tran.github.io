@@ -328,3 +328,7 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 @media(max-width:520px){.more-grid{gap:14px}.more-grid>*{flex-basis:86%;min-height:265px}.more-scroll-controls{gap:15px}.more-scroll-controls label{font-size:12px}}
 
 .more-grid{scroll-padding-inline:4px}
+
+/* Slightly larger name and email introduction. */
+.about-copy>.eyebrow{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+@media(max-width:520px){.about-copy>.eyebrow{font-size:13px}}
