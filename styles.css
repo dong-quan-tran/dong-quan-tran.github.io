@@ -358,3 +358,7 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 #research-title.eyebrow{font-size:22px;letter-spacing:1.2px;line-height:1.5;margin:0;color:var(--accent)}
 @media(max-width:780px){.about-portrait{max-width:350px}}
 @media(max-width:520px){.about-portrait{max-width:280px}#research-title.eyebrow{font-size:18px;letter-spacing:1px}}
+
+/* Matching section heading sizes. */
+#work-title.eyebrow,#research-title.eyebrow{font-size:22px;letter-spacing:1.2px;line-height:1.5}
+@media(max-width:520px){#work-title.eyebrow,#research-title.eyebrow{font-size:18px;letter-spacing:1px}}
