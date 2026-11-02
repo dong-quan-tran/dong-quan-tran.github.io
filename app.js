@@ -10,7 +10,7 @@ const projects = {
     decision: 'Keep the deterministic scoring pipeline in control. Optional AI summaries can explain the evidence, but cannot change the model score, final label, or risk level.',
     evidence: 'The repository documents a historical 135,053-URL held-out evaluation and separate scoring benchmarks. Its evaluation notes also examine URL-format shortcuts and limits to generalization. These are scoped measurements, not a guarantee for unseen links.',
     flow: 'URL → normalization → model + heuristics → risk fusion → explanation',
-    repo: 'SentinelTI',
+    repo: 'SentinelTI', demo: 'https://sentinelti.vercel.app/', demoLabel: 'Live demo',
     scope: 'The card is a hand-built illustration using a reserved .example domain; it does not run the classifier.'
   },
   infer: {
@@ -61,7 +61,7 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <div class="dialog-flow">${project.flow}</div>
       <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
-      <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">Sample-data demo ↗</a>` : ''}</div>
+      <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'} ↗</a>` : ''}</div>
       ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn &#8599;</a>` : ''}
       <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
