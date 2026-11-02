@@ -176,3 +176,11 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 .research-term .research-program>.text-link{margin-top:15px}
 @media(max-width:780px){.research-term .research-programs{gap:24px}.research-term .research-program+.research-program{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}}
 @media(max-width:520px){.research-program h4{font-size:22px}.research-term-heading h3{font-size:24px}}
+
+/* Hero actions as clear, consistently sized buttons. */
+.hero-actions{display:grid;grid-template-columns:max-content max-content;gap:12px;justify-content:start}
+.hero-actions .button{justify-content:space-between;min-height:47px;border:1px solid transparent;font-size:14px;gap:22px}
+.hero-actions .outline{border-color:#56647a;background:transparent;color:var(--text);transition:border-color .2s,background .2s}
+.hero-actions .outline:hover{border-color:var(--accent);background:#8ab4ff12}
+@media(max-width:520px){.hero-actions{grid-template-columns:max-content max-content;gap:10px}.hero-actions .button{font-size:13px;padding:12px 14px;gap:14px}}
+@media(max-width:360px){.hero-actions .button{font-size:12px;padding:11px 12px;gap:10px}}
