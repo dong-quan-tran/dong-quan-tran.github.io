@@ -245,3 +245,6 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 
 /* Keep the sample URL beside its search icon. */
 .url-field{justify-content:flex-start;gap:12px}
+
+/* Match research post links to project action buttons. */
+.phase-actions.project-actions{margin:0 0 16px 45px}
