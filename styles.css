@@ -282,3 +282,8 @@ footer{font-size:12px}footer>span:nth-child(2){font-size:10px;letter-spacing:.5p
 /* Keep card captions minimal; the full stack appears in project details. */
 .project-copy h3{margin-top:0}
 .dialog-stack{margin:12px 0 24px}
+
+/* Large project titles belong inside their visual cards. */
+.art-toolbar .card-title{font-family:var(--font);font-size:34px;font-weight:500;line-height:1.2;letter-spacing:-1px}
+@media(max-width:780px){.art-toolbar .card-title{font-size:29px}}
+@media(max-width:520px){.art-toolbar .card-title{font-size:32px}}
