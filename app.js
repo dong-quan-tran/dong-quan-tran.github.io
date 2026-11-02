@@ -37,6 +37,9 @@ const projects = {
     scope: 'An experimental project. No public deployment URL is listed in the repository metadata.'
   },
   sentinel: {
+    displayCategory: "SECURITY / MACHINE LEARNING",
+    summary: "From a suspicious link to an understandable risk assessment.",
+    stack: ["Python", "React", "FastAPI", "XGBoost", "scikit-learn", "SQLite", "URLhaus", "Pandas", "Vite", "Pytest", "Vitest"],
     name: 'SentinelTI', category: 'Security · Applied ML · Full stack',
     lede: 'A URL risk assessment should explain itself.',
     problem: 'A suspicious link is easy to share and harder to judge. SentinelTI brings model predictions, structured rules, and threat intelligence into one investigation workflow.',
@@ -48,6 +51,9 @@ const projects = {
     scope: 'The card is a hand-built illustration using a reserved .example domain; it does not run the classifier.'
   },
   infer: {
+    displayCategory: "DATA SYSTEMS / APPLIED AI",
+    summary: "Ask a question. Inspect the SQL. Understand your data.",
+    stack: ["Python", "TypeScript", "React", "FastAPI", "Apache Arrow", "DataFusion", "SQLGlot", "Ollama", "Gemini API", "OpenTelemetry", "Vite", "Pytest"],
     name: 'InferSQL', category: 'Data systems · AI · Full stack',
     lede: 'Make the path from a question to an answer inspectable.',
     problem: 'Natural-language queries are useful only if the generated SQL respects the actual schema and the intended operation. InferSQL makes validation and execution visible in one workbench.',
@@ -59,6 +65,9 @@ const projects = {
     scope: 'The card uses an illustrative query and sample results. It does not call an AI provider or execute SQL.'
   },
   book: {
+    displayCategory: "C++ / MARKET SYSTEMS",
+    summary: "Replay a market, one event at a time. See what emerges.",
+    stack: ["C++20", "Python", "pybind11", "CMake", "FastAPI", "React", "XGBoost", "MLflow", "SHAP", "GoogleTest", "Docker Compose", "GitHub Actions"],
     name: 'Bookforge', category: 'C++20 · Systems · Market research',
     lede: 'Understand a market by rebuilding its events.',
     problem: 'Studying market behavior requires replay that is repeatable and preserves order-book rules. Bookforge connects that systems problem to a Python research workflow.',
@@ -70,6 +79,9 @@ const projects = {
     scope: 'An educational market replay platform. The homepage order book is an illustration, not live market data or a running C++ engine.'
   },
   due: {
+    displayCategory: "PRODUCT / HACKRICE 16",
+    summary: "Scattered deadlines, brought together with their evidence.",
+    stack: ["Python", "TypeScript", "Next.js", "React", "Tailwind CSS", "FastAPI", "SQLAlchemy", "SQLite", "Ollama", "Gemini API", "Google OAuth", "Google Calendar API", "Gmail API", "Canvas API"],
     name: 'DueScope', category: 'Product engineering · HackRice 16 · Early beta',
     lede: 'A changed deadline should come with evidence.',
     problem: 'Academic deadlines and job-search updates arrive through different sources. DueScope brings them into one reviewable workflow while retaining the original evidence.',
@@ -88,8 +100,9 @@ document.querySelectorAll('[data-project]').forEach(button => {
     const project = projects[button.dataset.project];
     document.querySelector('#dialog-content').innerHTML = `
       <h2 id="dialog-title">${project.name}</h2>
-      <div class="tags"><span>${project.category}</span></div>
-      <p class="dialog-lede">${project.lede}</p>
+      <div class="tags"><span>${project.displayCategory || project.category}</span></div>
+      <p class="dialog-lede">${project.summary || project.lede}</p>
+      ${project.stack ? `<h3>Tools & technologies</h3><div class="tags dialog-stack" aria-label="Tools and technologies">${project.stack.map(tool => `<span>${tool}</span>`).join('')}</div>` : ''}
       <h3>The problem</h3><p>${project.problem}</p>
       <h3>The build</h3><p>${project.build}</p>
       <div class="dialog-flow">${project.flow}</div>
