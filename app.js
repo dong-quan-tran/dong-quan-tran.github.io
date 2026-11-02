@@ -95,8 +95,8 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <div class="dialog-flow">${project.flow}</div>
       <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
-      <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'} ↗</a>` : ''}</div>
-      ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn &#8599;</a>` : ''}
+      <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'}</a>` : ''}</div>
+      ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn</a>` : ''}
       <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
     dialog.scrollTop = 0;
