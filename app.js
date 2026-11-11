@@ -3,7 +3,7 @@
 const github = 'https://github.com/dong-quan-tran/';
 const projects = {
   loanwick: {
-    "name": "LoanWick",
+    "name": "Loan Wick",
     "displayCategory": "FINTECH / APPLIED AI / HACKUTD 2026",
     "category": "Commercial loan review / Team project",
     "summary": "Catch conflicting loan claims. Follow the evidence. Keep people in control.",
