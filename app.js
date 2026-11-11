@@ -204,9 +204,9 @@ const projects = {
     problem: 'Academic deadlines and job-search updates arrive through different sources. DueScope brings them into one reviewable workflow while retaining the original evidence.',
     build: 'The project covers academic imports, pasted updates, deadline extraction, conflict detection, history, ICS export, and locally configured Gmail and Google Calendar integrations.',
     decision: 'Require a review before external calendar changes. Conflicting dates become proposals, and accepted changes retain the previous deadline in history.',
-    evidence: 'The public demo uses sample data. Real integrations require a privately configured instance. The linked repository documents what works locally and what remains early beta.',
+    evidence: 'Integrations require a privately configured instance. The linked repository documents what works locally and what remains early beta.',
     flow: 'Source → evidence + date extraction → conflict check → review → approved export',
-    repo: 'DueScope-HackRice16', linkedin: 'https://lnkd.in/p/gvRdyX3w', demo: 'https://due-scope-hack-rice.vercel.app/demo',
+    repo: 'DueScope-HackRice16', linkedin: 'https://lnkd.in/p/gvRdyX3w',
     scope: 'Both DueScope repositories are presented as one project. The homepage shows a sample workflow, not a personal inbox.'
   }
 };
