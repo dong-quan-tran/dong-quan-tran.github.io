@@ -431,3 +431,13 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 @media(max-width:1100px) and (min-width:981px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
 @media(max-width:600px){.due-preview{margin-top:29px}.due-calendar{padding-block:10px}.due-calendar strong{font-size:32px}}
 @media(max-width:360px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
+
+/* Align the desktop risk illustration with the URL and center its bullet rows. */
+@media(min-width:981px){
+ .project-grid .sentinel .url-field{margin-top:8px;padding-block:6px}
+ .project-grid .sentinel .risk-layout{display:grid;grid-template-columns:70px minmax(0,1fr);align-items:center;gap:16px;margin-top:10px}
+ .project-grid .sentinel .risk-ring{width:70px;height:70px}
+ .project-grid .sentinel .signal-list{font-size:12px;line-height:1.4;gap:8px}
+ .project-grid .sentinel .signal-list>span{display:flex;align-items:center;gap:8px}
+ .project-grid .sentinel .signal-list i{flex:none;width:5px;height:5px;margin:0}
+}
