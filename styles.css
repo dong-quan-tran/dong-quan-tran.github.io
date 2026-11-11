@@ -369,3 +369,45 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .more-grid .more-category{font-family:var(--mono);font-size:12px;letter-spacing:.7px;line-height:1.6;min-height:3.2em;margin:12px 0 0;color:var(--accent)}
 @media(max-width:780px){.more-item>.more-project{padding:21px}}
 @media(max-width:520px){.more-item>.more-project{min-height:265px}.more-grid .more-category{font-size:11px}}
+
+/* Five featured projects in a compact grid, with room for one future card. */
+#work{padding-top:44px;padding-bottom:44px}
+#work>.section-heading{margin-bottom:20px}
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.project-grid .project-card .project-art{height:250px;padding:18px}
+.project-grid .art-toolbar .card-title{font-size:29px;letter-spacing:-.8px;line-height:1.15}
+.project-grid .art-tag,.project-grid .art-footer,.project-grid .query-status{display:none}
+.project-grid .card-destinations{padding:10px 14px}
+.project-grid .card-destinations .project-actions{gap:7px}
+.project-grid .card-destinations .project-actions a{font-size:12px;min-height:40px;padding:7px 10px;white-space:nowrap}
+.project-grid .card-reveal{inset:0 0 61px;padding:18px;gap:10px}
+.project-grid .card-reveal .eyebrow{font-size:11px}
+.project-grid .card-reveal p{font-size:14px;line-height:1.55}
+.project-grid .reveal-hint{font-size:12px}
+.project-grid .url-field{margin-top:12px;padding:7px 8px;font-size:11px;gap:8px;overflow-wrap:anywhere;line-height:1.5}
+.project-grid .risk-layout{margin-top:13px;gap:14px}
+.project-grid .risk-ring{width:68px;height:68px;border-width:5px}
+.project-grid .risk-ring>span{font-size:14px}
+.project-grid .risk-ring small{font-size:8px}
+.project-grid .signal-list{font-size:11px;gap:7px;line-height:1.4}
+.project-grid .signal-list i{margin-right:4px}
+.project-grid .query-prompt{margin-top:12px;padding:7px 9px;font-size:12px;line-height:1.4}
+.project-grid .code-preview{font-size:11px;line-height:1.65;padding:6px 0 0}
+.project-card.chess .chess-piece{font-size:112px;line-height:1;top:62px;left:calc(50% - 68px)}
+.project-card.chess .chess-small{font-size:66px;line-height:1;right:23%;bottom:83px}
+.project-card.chess .play-sticker{left:18px;bottom:77px;padding:4px 6px;font-size:9px}
+.project-card.blink .play-art svg{top:62px;left:15%;width:70%;height:100px}
+.project-card.blink .morse{bottom:79px;font-size:15px;line-height:1.4}
+.loanwick .project-art{background:linear-gradient(135deg,#20272c,#17202b);border-color:#44556b}
+.loan-award{display:flex;align-items:center;gap:6px;margin-top:7px;color:#dbc38d;font-size:10px;line-height:1.5}
+.loan-award svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.loan-comparison{display:grid;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr);align-items:center;gap:6px;margin-top:13px}
+.loan-document{display:grid;gap:3px;padding:9px 10px;border:1px solid #4b5b70;border-radius:5px;background:#10141c70}
+.loan-document>span{font:9px/1.4 var(--mono);letter-spacing:1px;color:var(--muted)}
+.loan-document strong{font:12px/1.5 var(--mono);color:var(--text)}
+.loan-document small{font-size:10px;line-height:1.4;color:var(--muted)}
+.loan-conflict{display:grid;place-items:center;width:18px;height:18px;border:1px solid #b89b61;border-radius:50%;font:11px/1 var(--mono);color:#dbc38d}
+@media(min-width:981px) and (max-height:800px){.project-grid .project-card .project-art{height:240px}}
+@media(max-width:980px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.project-grid{grid-template-columns:minmax(0,1fr);gap:18px}.project-grid .project-card .project-art{height:270px;padding:20px}.project-grid .art-toolbar .card-title{font-size:30px}.project-grid .card-destinations{padding:11px 16px}.project-grid .card-destinations .project-actions a{font-size:13px}.project-grid .card-reveal{bottom:63px;padding:20px}.project-grid .card-reveal p{font-size:15px}.project-grid .url-field{font-size:12px;margin-top:16px}.project-grid .risk-layout{gap:16px;margin-top:16px}.project-grid .risk-ring{width:74px;height:74px}.project-grid .signal-list{font-size:12px}.project-grid .query-prompt{font-size:13px;margin-top:16px}.project-grid .code-preview{font-size:12px}.project-card.chess .chess-piece{top:72px}.project-card.chess .chess-small{bottom:91px}.project-card.chess .play-sticker{bottom:81px}.project-card.blink .play-art svg{top:76px}.project-card.blink .morse{bottom:84px}.loan-award{font-size:11px}.loan-comparison{margin-top:17px}.loan-document{padding:10px}.loan-document strong{font-size:13px}.loan-document small{font-size:11px}}
+@media(max-width:360px){.project-grid .art-toolbar .card-title{font-size:28px}.project-grid .card-destinations .project-actions{gap:6px}.project-grid .card-destinations .project-actions a{font-size:12px;padding:7px 9px}.project-grid .url-field{font-size:10px}.project-grid .signal-list{font-size:11px}}

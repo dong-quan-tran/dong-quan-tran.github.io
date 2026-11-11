@@ -2,6 +2,35 @@
 
 const github = 'https://github.com/dong-quan-tran/';
 const projects = {
+  loanwick: {
+    "name": "LoanWick",
+    "displayCategory": "FINTECH / APPLIED AI / HACKUTD 2026",
+    "category": "Commercial loan review / Team project",
+    "summary": "Catch conflicting loan claims. Follow the evidence. Keep people in control.",
+    "stack": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "SpacetimeDB",
+        "NVIDIA Nemotron",
+        "Zod",
+        "Vite",
+        "unpdf",
+        "Vitest",
+        "Playwright",
+        "GitHub Actions"
+    ],
+    "problem": "Reviewing each loan in isolation can hide conflicting equipment ownership claims and connected businesses that need to be reviewed together.",
+    "build": "A React workspace brings applications, source evidence, borrower clarifications, and human reviews together. SpacetimeDB manages authorized case data and subscriptions. A Node.js worker supports NVIDIA Nemotron tool calling alongside deterministic collateral and group checks.",
+    "decision": "Let rules establish supported concerns and AI help explain them. Relevant document or payment changes invalidate earlier reviews, and the server rechecks current requirements before any simulated release.",
+    "evidence": "Winner of the Goldman Sachs Track at HackUTD 2026. My contributions covered shared data contracts, analysis rules, synthetic fixtures, evaluation, CI, and database integration. Tests cover evidence references, changing source data, role isolation, and browser workflows.",
+    "flow": "Loan documents -> evidence-backed checks -> borrower clarification -> human review",
+    "repoUrl": "https://github.com/minhle211/LoanWick-HackUTD26",
+    "demo": "https://loanmebro.vip/",
+    "demoLabel": "Live demo",
+    "devpost": "https://devpost.com/software/loan-wick",
+    "scope": "A four-person hackathon prototype using synthetic loan data. No money moves. The card illustrates a sample ownership conflict. Document extraction supports text PDFs, JSON, and CSV; scanned PDFs and DOCX extraction are unsupported."
+},
   aegis: {
     "name": "AegisLog",
     "category": "SECURITY / LOG ANALYSIS",
@@ -196,7 +225,7 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <div class="dialog-flow">${project.flow}</div>
       <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
-      <div class="dialog-links"><a class="button primary" href="${github}${project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'}</a>` : ''}</div>
+      <div class="dialog-links"><a class="button primary" href="${project.repoUrl || github + project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'}</a>` : ''}${project.devpost ? `<a class="text-link" href="${project.devpost}" target="_blank" rel="noopener noreferrer">View on Devpost</a>` : ''}</div>
       ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn</a>` : ''}
       <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
