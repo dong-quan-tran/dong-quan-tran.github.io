@@ -441,3 +441,13 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
  .project-grid .sentinel .signal-list>span{display:flex;align-items:center;gap:8px}
  .project-grid .sentinel .signal-list i{flex:none;width:5px;height:5px;margin:0}
 }
+
+/* Hackathon context stays visible beneath each event project's name. */
+.hackathon-note{margin-top:7px;font-size:11px;line-height:1.5;color:#dbc38d}
+.project-card.chess .chess-piece{top:84px;font-size:82px}
+.project-card.chess .chess-small{font-size:54px;bottom:78px}
+.project-card.chess .play-sticker{bottom:73px}
+.project-card.blink .play-art svg{top:80px;height:80px}
+.project-card.blink .morse{bottom:72px}
+.project-card.due .due-preview{margin-top:9px}
+@media(max-width:600px){.project-card.chess .chess-piece{top:94px;font-size:94px}.project-card.chess .play-sticker{bottom:78px}.project-card.blink .play-art svg{top:87px;height:90px}.project-card.blink .morse{bottom:76px}.project-card.due .due-preview{margin-top:16px}}
