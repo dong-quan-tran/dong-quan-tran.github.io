@@ -370,7 +370,7 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 @media(max-width:780px){.more-item>.more-project{padding:21px}}
 @media(max-width:520px){.more-item>.more-project{min-height:265px}.more-grid .more-category{font-size:11px}}
 
-/* Five featured projects in a compact grid, with room for one future card. */
+/* Six featured projects in a compact grid. */
 #work{padding-top:44px;padding-bottom:44px}
 #work>.section-heading{margin-bottom:20px}
 .project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -415,3 +415,19 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 /* Keep both risk labels centered and clear of the circular border. */
 .project-grid .risk-ring>span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.15}
 .project-grid .risk-ring small{width:7ch;line-height:1.15;letter-spacing:0;white-space:normal;text-align:center}
+
+/* DueScope turns a source update into a calendar proposal. */
+.project-card.due .project-art{background:linear-gradient(135deg,#29221f,#211d23);border-color:#554339}
+.due-preview{display:grid;grid-template-columns:minmax(0,1fr) 18px 80px;gap:9px;align-items:center;margin-top:21px}
+.due-source{padding:11px 12px;border:1px solid #735746;border-left:3px solid #c9987e;border-radius:5px;background:#362a245e}
+.due-source>span{font:9px/1.4 var(--mono);letter-spacing:.7px;color:#d8b89f}
+.due-source p{margin-top:5px;font-size:13px;line-height:1.5;color:#e0cfc5}
+.due-source mark{white-space:nowrap;background:#dab09325;color:#f1c7a7;padding:0 2px}
+.due-connector{width:18px;height:18px;fill:none;stroke:#c9987e;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.due-calendar{display:grid;justify-items:center;gap:3px;padding:8px 5px;border:1px solid #8b6b51;border-radius:6px;background:#3b2e27}
+.due-calendar>span{font:10px/1.3 var(--mono);letter-spacing:1px;color:#d8b89f}
+.due-calendar strong{font-size:29px;line-height:1.1;color:#f1c7a7}
+.due-calendar small{font-size:9px;line-height:1.4;color:#d8b89f;white-space:nowrap}
+@media(max-width:1100px) and (min-width:981px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
+@media(max-width:600px){.due-preview{margin-top:29px}.due-calendar{padding-block:10px}.due-calendar strong{font-size:32px}}
+@media(max-width:360px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
