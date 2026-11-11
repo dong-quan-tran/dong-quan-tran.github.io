@@ -28,7 +28,7 @@ const projects = {
     "repoUrl": "https://github.com/minhle211/LoanWick-HackUTD26",
     "demo": "https://loanmebro.vip/",
     "demoLabel": "Live demo",
-    "devpost": "https://devpost.com/software/loan-wick",
+    "linkedin": "https://lnkd.in/p/gDeg4yS6",
     "scope": "A four-person hackathon prototype using synthetic loan data. No money moves. The card illustrates a sample ownership conflict. Document extraction supports text PDFs, JSON, and CSV; scanned PDFs and DOCX extraction are unsupported."
 },
   aegis: {
@@ -225,7 +225,7 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <div class="dialog-flow">${project.flow}</div>
       <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
-      <div class="dialog-links"><a class="button primary" href="${project.repoUrl || github + project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'}</a>` : ''}${project.devpost ? `<a class="text-link" href="${project.devpost}" target="_blank" rel="noopener noreferrer">View on Devpost</a>` : ''}</div>
+      <div class="dialog-links"><a class="button primary" href="${project.repoUrl || github + project.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a>${project.demo ? `<a class="text-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">${project.demoLabel || 'Sample-data demo'}</a>` : ''}</div>
       ${project.linkedin ? `<a class="project-post text-link" href="${project.linkedin}" target="_blank" rel="noopener noreferrer">Read the project post on LinkedIn</a>` : ''}
       <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
