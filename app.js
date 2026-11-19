@@ -195,6 +195,20 @@ const projects = {
     repo: 'Bookforge',
     scope: 'An educational market replay platform. The homepage order book is an illustration, not live market data or a running C++ engine.'
   },
+  faze: {
+    name: 'FaZe ID',
+    displayCategory: 'FULL STACK / ESPORTS / HACKUTA 2026',
+    category: 'HackUTA 2026 / Team project / Fan platform',
+    summary: 'Follow the game. Make a prediction. Turn participation into rewards.',
+    stack: ['TypeScript', 'React', 'TanStack Query', 'Vite', 'Node.js', 'Fastify', 'PostgreSQL', 'Tiger Cloud', 'Better Auth', 'Zod', 'LiveKit', 'Chert', 'ElevenLabs', 'Muse Spark', 'Vitest', 'Vultr'],
+    problem: 'Player statistics, match predictions, community rewards, and exclusive events often live in separate places. FaZe ID connects them in one fan experience.',
+    build: 'A shared React app supports fans and staff. Fastify and PostgreSQL handle sourced player data, predictions, points, reward redemptions, and event applications. A separate LiveKit and Chert agent supports a local AI interview setup.',
+    decision: 'Keep statistics tied to their original sources and collection times. Validate imports before writing, preserve historical snapshots, and leave missing metrics unavailable instead of inventing numbers.',
+    evidence: 'Built as a team project at HackUTA 2026. My documented scope covered player and match data, source tracking, import validation, and read APIs. The backend includes transaction-based imports, repeat-safe rewards, and staff-reviewed event workflows.',
+    flow: 'Sourced player stats -> match prediction -> points -> rewards or event eligibility',
+    repo: 'FazeClan-HackUTA26',
+    scope: 'An independent hackathon concept. Statistics are manually refreshed snapshots. Rewards are proposed demo benefits. FaceTime calls require a local service; public AI insights and highlights are not verified as working. The card shows an illustrative fan journey.'
+  },
   due: {
     displayCategory: "PRODUCT / HACKRICE 16",
     summary: "Scattered deadlines, brought together with their evidence.",

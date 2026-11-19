@@ -416,22 +416,6 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .project-grid .risk-ring>span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.15}
 .project-grid .risk-ring small{width:7ch;line-height:1.15;letter-spacing:0;white-space:normal;text-align:center}
 
-/* DueScope turns a source update into a calendar proposal. */
-.project-card.due .project-art{background:linear-gradient(135deg,#29221f,#211d23);border-color:#554339}
-.due-preview{display:grid;grid-template-columns:minmax(0,1fr) 18px 80px;gap:9px;align-items:center;margin-top:21px}
-.due-source{padding:11px 12px;border:1px solid #735746;border-left:3px solid #c9987e;border-radius:5px;background:#362a245e}
-.due-source>span{font:9px/1.4 var(--mono);letter-spacing:.7px;color:#d8b89f}
-.due-source p{margin-top:5px;font-size:13px;line-height:1.5;color:#e0cfc5}
-.due-source mark{white-space:nowrap;background:#dab09325;color:#f1c7a7;padding:0 2px}
-.due-connector{width:18px;height:18px;fill:none;stroke:#c9987e;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.due-calendar{display:grid;justify-items:center;gap:3px;padding:8px 5px;border:1px solid #8b6b51;border-radius:6px;background:#3b2e27}
-.due-calendar>span{font:10px/1.3 var(--mono);letter-spacing:1px;color:#d8b89f}
-.due-calendar strong{font-size:29px;line-height:1.1;color:#f1c7a7}
-.due-calendar small{font-size:9px;line-height:1.4;color:#d8b89f;white-space:nowrap}
-@media(max-width:1100px) and (min-width:981px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
-@media(max-width:600px){.due-preview{margin-top:29px}.due-calendar{padding-block:10px}.due-calendar strong{font-size:32px}}
-@media(max-width:360px){.due-preview{grid-template-columns:minmax(0,1fr) 16px 72px;gap:7px}.due-source{padding:10px 9px}.due-source>span{font-size:8px;letter-spacing:.4px}.due-source p{font-size:12px}.due-connector{width:16px}}
-
 /* Align the desktop risk illustration with the URL and center its bullet rows. */
 @media(min-width:981px){
  .project-grid .sentinel .url-field{margin-top:8px;padding-block:6px}
@@ -449,8 +433,8 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .project-card.chess .play-sticker{bottom:73px}
 .project-card.blink .play-art svg{top:80px;height:80px}
 .project-card.blink .morse{bottom:72px}
-.project-card.due .due-preview{margin-top:9px}
-@media(max-width:600px){.project-card.chess .chess-piece{top:94px;font-size:94px}.project-card.chess .play-sticker{bottom:78px}.project-card.blink .play-art svg{top:87px;height:90px}.project-card.blink .morse{bottom:76px}.project-card.due .due-preview{margin-top:16px}}
+
+@media(max-width:600px){.project-card.chess .chess-piece{top:94px;font-size:94px}.project-card.chess .play-sticker{bottom:78px}.project-card.blink .play-art svg{top:87px;height:90px}.project-card.blink .morse{bottom:76px}}
 
 /* Two businesses claiming one visible asset makes the loan conflict concrete. */
 .loan-example{margin-top:12px}
@@ -472,3 +456,14 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .dialog-links.project-actions a:hover{border-color:var(--accent);background:#8ab4ff20}
 .dialog-links.project-actions a:first-child:hover{background:#a1c2ff;border-color:#a1c2ff}
 @media(max-width:520px){.dialog-links.project-actions{gap:8px}.dialog-links.project-actions a{padding:10px 12px;font-size:13px}}
+
+/* FaZe ID illustrates participation without implying a live match feed. */
+.project-card.faze .project-art{background:linear-gradient(135deg,#2b2028,#191e2b);border-color:#654352}
+.faze-preview{margin-top:8px}
+.faze-preview-label{display:block;font:10px/1.4 var(--mono);letter-spacing:1px;color:#d6a6b8}
+.faze-journey{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:9px}
+.faze-journey>div{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;padding:9px 2px;border:1px solid #765064;border-radius:5px;background:#d4779e0c}
+.faze-journey svg{width:23px;height:23px;fill:none;stroke:#e7a5bf;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.faze-journey span{font-size:12px;line-height:1.4;white-space:nowrap;color:#ecd4df}
+@media(max-width:600px){.faze-preview{margin-top:20px}.faze-journey>div{padding-block:12px}.faze-journey span{font-size:13px}}
+@media(max-width:360px){.faze-journey{gap:6px}.faze-journey span{font-size:12px}}
