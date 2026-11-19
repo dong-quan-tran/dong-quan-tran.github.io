@@ -207,6 +207,7 @@ const projects = {
     evidence: 'Built as a team project at HackUTA 2026. My documented scope covered player and match data, source tracking, import validation, and read APIs. The backend includes transaction-based imports, repeat-safe rewards, and staff-reviewed event workflows.',
     flow: 'Sourced player stats -> match prediction -> points -> rewards or event eligibility',
     repo: 'FazeClan-HackUTA26',
+    demo: 'http://manilovefaze.club/faze-id',
     scope: 'An independent hackathon concept. Statistics are manually refreshed snapshots. Rewards are proposed demo benefits. FaceTime calls require a local service; public AI insights and highlights are not verified as working. The card shows an illustrative fan journey.'
   },
   due: {
