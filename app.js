@@ -195,6 +195,20 @@ const projects = {
     repo: 'Bookforge',
     scope: 'An educational market replay platform. The homepage order book is an illustration, not live market data or a running C++ engine.'
   },
+  travel: {
+    name: 'FareForge AI',
+    displayCategory: 'TRAVEL / REWARDS / MICROSOFT AI AGENT HACKATHON 2026',
+    category: 'Travel comparison / Team project',
+    summary: 'A cheaper fare is only half the story. Compare the trip, the points, and the trade-offs.',
+    stack: ['Python', 'JavaScript', 'HTML', 'CSS', 'SerpApi', 'Google Flights search', 'Google Hotels search', 'JSON', 'unittest', 'Agent Skills'],
+    problem: 'Flight prices, hotel costs, baggage fees, and reward points are hard to compare together. A low headline price can hide missing charges or a poor points redemption.',
+    build: 'A Python comparison engine and browser interface rank flights and hotels by cash cost or estimated card points. Optional SerpApi searches supply flight and hotel listings. Airline and hotel catalogs model Chase and Amex transfer options, including transfer ratios and minimums.',
+    decision: 'Keep cash paid separate from the value of points. Unknown fees stay visible, incomplete searches cannot produce a complete trip total, and provider failures never silently switch to fictional prices.',
+    evidence: '3rd Place overall and 1st Place in the Travel Agent track at the Microsoft AI Agent Hackathon 2026. The repository assigns me backend and integration work. All 59 tests passed in this review, covering pricing, points balances, incomplete fees, provider parsing, and HTTP endpoints.',
+    flow: 'Trip details -> flight and hotel offers -> fee checks -> cash-versus-points comparison',
+    repo: 'TravelAgent-MicrosoftAIHackathon2026',
+    scope: 'A team hackathon prototype built from a supplied starter. Demo offers are fictional; live search and points figures are estimates, with no booking or award-inventory confirmation. The runnable app uses deterministic Python comparison logic. No public demo URL is listed.'
+  },
   faze: {
     name: 'FaZe ID',
     displayCategory: 'FULL STACK / ESPORTS / HACKUTA 2026',

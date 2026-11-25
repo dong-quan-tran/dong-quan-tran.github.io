@@ -467,3 +467,15 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .faze-journey span{font-size:12px;line-height:1.4;white-space:nowrap;color:#ecd4df}
 @media(max-width:600px){.faze-preview{margin-top:20px}.faze-journey>div{padding-block:12px}.faze-journey span{font-size:13px}}
 @media(max-width:360px){.faze-journey{gap:6px}.faze-journey span{font-size:12px}}
+
+/* FareForge keeps both awards visible above a cash-versus-points comparison. */
+.project-card.travel .project-art{background:linear-gradient(135deg,#1e2c35,#19212d);border-color:#4b6678}
+.travel-award{display:flex;align-items:center;gap:5px;margin-top:7px;color:#dbc38d;font-size:12px;line-height:1.25}
+.travel-award svg{flex:none;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.travel-event{margin-top:3px;color:#b1c2d0;font-size:11px;line-height:1.4}
+.fare-preview{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);align-items:center;gap:5px;margin-top:8px}
+.fare-option{display:grid;gap:4px;justify-items:center;min-width:0;padding:8px 3px;border:1px solid #527186;border-radius:5px;background:#8ab4ff09}
+.fare-option strong{font-size:16px;font-weight:500;line-height:1.2;color:#bfd9ed}
+.fare-option span{font-size:11px;line-height:1.4;white-space:nowrap;color:#b1c2d0}
+.fare-versus{text-align:center;color:#899ba8;font:11px/1.4 var(--mono)}
+@media(max-width:600px){.fare-preview{margin-top:16px}.fare-option{padding-block:11px}.fare-option span{font-size:11px}}
