@@ -207,6 +207,7 @@ const projects = {
     evidence: '3rd Place overall and 1st Place in the Travel Agent track at the Microsoft AI Agent Hackathon 2026. The repository assigns me backend and integration work. All 59 tests passed in this review, covering pricing, points balances, incomplete fees, provider parsing, and HTTP endpoints.',
     flow: 'Trip details -> flight and hotel offers -> fee checks -> cash-versus-points comparison',
     repo: 'TravelAgent-MicrosoftAIHackathon2026',
+    linkedin: 'https://www.linkedin.com/posts/dong-quan-tran_microsoft-aiagents-hackathon-ugcPost-7529398783613284352-DQkB/',
     scope: 'A team hackathon prototype built from a supplied starter. Demo offers are fictional; live search and points figures are estimates, with no booking or award-inventory confirmation. The runnable app uses deterministic Python comparison logic. No public demo URL is listed.'
   },
   faze: {
