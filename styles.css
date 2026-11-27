@@ -399,8 +399,8 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 .project-card.blink .play-art svg{top:62px;left:15%;width:70%;height:100px}
 .project-card.blink .morse{bottom:79px;font-size:15px;line-height:1.4}
 .loanwick .project-art{background:linear-gradient(135deg,#20272c,#17202b);border-color:#44556b}
-.loan-award{display:flex;align-items:center;gap:6px;margin-top:7px;color:#dbc38d;font-size:10px;line-height:1.5}
-.loan-award svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+
 
 
 
@@ -409,7 +409,7 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 
 @media(min-width:981px) and (max-height:800px){.project-grid .project-card .project-art{height:240px}}
 @media(max-width:980px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.project-grid{grid-template-columns:minmax(0,1fr);gap:18px}.project-grid .project-card .project-art{height:270px;padding:20px}.project-grid .art-toolbar .card-title{font-size:30px}.project-grid .card-destinations{padding:11px 16px}.project-grid .card-destinations .project-actions a{font-size:13px}.project-grid .card-reveal{bottom:63px;padding:20px}.project-grid .card-reveal p{font-size:15px}.project-grid .url-field{font-size:12px;margin-top:16px}.project-grid .risk-layout{gap:16px;margin-top:16px}.project-grid .risk-ring{width:74px;height:74px}.project-grid .signal-list{font-size:12px}.project-grid .query-prompt{font-size:13px;margin-top:16px}.project-grid .code-preview{font-size:12px}.project-card.chess .chess-piece{top:72px}.project-card.chess .chess-small{bottom:91px}.project-card.chess .play-sticker{bottom:81px}.project-card.blink .play-art svg{top:76px}.project-card.blink .morse{bottom:84px}.loan-award{font-size:11px}}
+@media(max-width:600px){.project-grid{grid-template-columns:minmax(0,1fr);gap:18px}.project-grid .project-card .project-art{height:270px;padding:20px}.project-grid .art-toolbar .card-title{font-size:30px}.project-grid .card-destinations{padding:11px 16px}.project-grid .card-destinations .project-actions a{font-size:13px}.project-grid .card-reveal{bottom:63px;padding:20px}.project-grid .card-reveal p{font-size:15px}.project-grid .url-field{font-size:12px;margin-top:16px}.project-grid .risk-layout{gap:16px;margin-top:16px}.project-grid .risk-ring{width:74px;height:74px}.project-grid .signal-list{font-size:12px}.project-grid .query-prompt{font-size:13px;margin-top:16px}.project-grid .code-preview{font-size:12px}.project-card.chess .chess-piece{top:72px}.project-card.chess .chess-small{bottom:91px}.project-card.chess .play-sticker{bottom:81px}.project-card.blink .play-art svg{top:76px}.project-card.blink .morse{bottom:84px}}
 @media(max-width:360px){.project-grid .art-toolbar .card-title{font-size:28px}.project-grid .card-destinations .project-actions{gap:6px}.project-grid .card-destinations .project-actions a{font-size:12px;padding:7px 9px}.project-grid .url-field{font-size:10px}.project-grid .signal-list{font-size:11px}}
 
 /* Keep both risk labels centered and clear of the circular border. */
@@ -426,8 +426,8 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
  .project-grid .sentinel .signal-list i{flex:none;width:5px;height:5px;margin:0}
 }
 
-/* Hackathon context stays visible beneath each event project's name. */
-.hackathon-note{margin-top:7px;font-size:11px;line-height:1.5;color:#dbc38d}
+/* Keep each project illustration clear of its hackathon context. */
+
 .project-card.chess .chess-piece{top:84px;font-size:82px}
 .project-card.chess .chess-small{font-size:54px;bottom:78px}
 .project-card.chess .play-sticker{bottom:73px}
@@ -470,12 +470,22 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 
 /* FareForge keeps both awards visible above a cash-versus-points comparison. */
 .project-card.travel .project-art{background:linear-gradient(135deg,#1e2c35,#19212d);border-color:#4b6678}
-.travel-award{display:flex;align-items:center;gap:5px;margin-top:7px;color:#dbc38d;font-size:12px;line-height:1.25}
-.travel-award svg{flex:none;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.travel-event{margin-top:3px;color:#b1c2d0;font-size:11px;line-height:1.4}
+
+
+
 .fare-preview{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);align-items:center;gap:5px;margin-top:8px}
 .fare-option{display:grid;gap:4px;justify-items:center;min-width:0;padding:8px 3px;border:1px solid #527186;border-radius:5px;background:#8ab4ff09}
 .fare-option strong{font-size:16px;font-weight:500;line-height:1.2;color:#bfd9ed}
 .fare-option span{font-size:11px;line-height:1.4;white-space:nowrap;color:#b1c2d0}
 .fare-versus{text-align:center;color:#899ba8;font:11px/1.4 var(--mono)}
 @media(max-width:600px){.fare-preview{margin-top:16px}.fare-option{padding-block:11px}.fare-option span{font-size:11px}}
+
+/* Shared event and award formatting across featured hackathon projects. */
+.hackathon-context{display:flex;flex-direction:column;gap:3px;margin-top:7px}
+.hackathon-awards{display:flex;align-items:flex-start;gap:6px;margin:0;color:#dbc38d;font-size:12px;line-height:1.4}
+.hackathon-awards svg{flex:none;width:15px;height:15px;margin-top:1px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hackathon-event{margin:0;color:#b1c2d0;font-size:12px;line-height:1.4}
+/* Make room for the separate event line in the compact loan illustration. */
+.project-grid .loan-example{margin-top:8px}
+.project-grid .loan-business{padding-block:6px}
+.project-grid .loan-example-caption{margin-top:5px}
