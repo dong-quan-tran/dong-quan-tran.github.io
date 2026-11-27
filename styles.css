@@ -473,12 +473,34 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 
 
 
-.fare-preview{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);align-items:center;gap:5px;margin-top:8px}
-.fare-option{display:grid;gap:4px;justify-items:center;min-width:0;padding:8px 3px;border:1px solid #527186;border-radius:5px;background:#8ab4ff09}
+.fare-preview {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 28px minmax(0,1fr);
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+.fare-option {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+  min-width: 0;
+  padding: 6px 1px;
+  border: 1px solid #527186;
+  border-radius: 5px;
+  background: #8ab4ff09;
+}
 .fare-option strong{font-size:16px;font-weight:500;line-height:1.2;color:#bfd9ed}
-.fare-option span{font-size:11px;line-height:1.4;white-space:nowrap;color:#b1c2d0}
-.fare-versus{text-align:center;color:#899ba8;font:11px/1.4 var(--mono)}
-@media(max-width:600px){.fare-preview{margin-top:16px}.fare-option{padding-block:11px}.fare-option span{font-size:11px}}
+.fare-option span{font-size:11px;line-height:1.4;text-align:center;color:#b1c2d0}
+.fare-versus {
+  text-align: center;
+  color: #b1c2d0;
+  font: 600 17px/1.2 var(--mono);
+}
+@media (max-width: 600px) {
+  .fare-preview { margin-top: 16px; }
+  .fare-option { padding-block: 9px; }
+}
 
 /* Shared event and award formatting across featured hackathon projects. */
 .hackathon-context {
