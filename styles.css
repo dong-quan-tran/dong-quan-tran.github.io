@@ -481,11 +481,32 @@ input.more-scroll-track{appearance:none;-webkit-appearance:none;display:block;fl
 @media(max-width:600px){.fare-preview{margin-top:16px}.fare-option{padding-block:11px}.fare-option span{font-size:11px}}
 
 /* Shared event and award formatting across featured hackathon projects. */
-.hackathon-context{display:flex;flex-direction:column;gap:3px;margin-top:7px}
-.hackathon-awards{display:flex;align-items:flex-start;gap:6px;margin:0;color:#dbc38d;font-size:12px;line-height:1.4}
-.hackathon-awards svg{flex:none;width:15px;height:15px;margin-top:1px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hackathon-context {
+  container-type: inline-size;
+  margin-top: 7px;
+}
+.hackathon-awards {
+  margin: 0;
+  color: #dbc38d;
+  font-size: .6875rem;
+  line-height: 1.4;
+}
+.hackathon-event-full {
+  display: none;
+}
+.hackathon-event-compact {
+  white-space: nowrap;
+  text-decoration: none;
+}
+@container (min-width: 21.25rem) {
+  .hackathon-event-full {
+    display: inline;
+  }
+  .hackathon-event-compact {
+    display: none;
+  }
+}
 .hackathon-event{margin:0;color:#b1c2d0;font-size:12px;line-height:1.4}
-/* Make room for the separate event line in the compact loan illustration. */
 .project-grid .loan-example{margin-top:8px}
 .project-grid .loan-business{padding-block:6px}
 .project-grid .loan-example-caption{margin-top:5px}
