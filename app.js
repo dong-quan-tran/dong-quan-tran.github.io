@@ -204,7 +204,7 @@ const projects = {
     problem: 'Flight prices, hotel costs, baggage fees, and reward points are hard to compare together. A low headline price can hide missing charges or a poor points redemption.',
     build: 'A Python comparison engine and browser interface rank flights and hotels by cash cost or estimated card points. Optional SerpApi searches supply flight and hotel listings. Airline and hotel catalogs model Chase and Amex transfer options, including transfer ratios and minimums.',
     decision: 'Keep cash paid separate from the value of points. Unknown fees stay visible, incomplete searches cannot produce a complete trip total, and provider failures never silently switch to fictional prices.',
-    evidence: 'Placed 3rd overall and 1st in Travel Agent at the Microsoft AI Agent Hackathon 2026. The repository assigns me backend and integration work. All 59 tests passed in this review, covering pricing, points balances, incomplete fees, provider parsing, and HTTP endpoints.',
+    evidence: 'Placed 1st in Travel Agent and 3rd overall at the Microsoft AI Agent Hackathon 2026. The repository assigns me backend and integration work. All 59 tests passed in this review, covering pricing, points balances, incomplete fees, provider parsing, and HTTP endpoints.',
     flow: 'Trip details -> flight and hotel offers -> fee checks -> cash-versus-points comparison',
     repo: 'TravelAgent-MicrosoftAIHackathon2026',
     linkedin: 'https://www.linkedin.com/posts/dong-quan-tran_microsoft-aiagents-hackathon-ugcPost-7529398783613284352-DQkB/',
