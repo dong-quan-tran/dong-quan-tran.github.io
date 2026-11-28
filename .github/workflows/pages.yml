@@ -41,6 +41,11 @@ jobs:
         with:
           path: _site
 
+      # The Pages deploy action can briefly miss a newly uploaded artifact.
+      # https://github.com/actions/deploy-pages/issues/451
+      - name: Wait for the Pages artifact to become available
+        run: sleep 60
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
