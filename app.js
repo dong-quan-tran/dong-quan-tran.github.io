@@ -250,23 +250,15 @@ document.querySelectorAll('[data-project]').forEach(button => {
       <div class="tags"><span>${project.displayCategory || project.category}</span></div>
       <p class="dialog-lede">${project.summary || project.lede}</p>
       ${project.stack ? `<h3>Tools & technologies</h3><div class="tags dialog-stack" aria-label="Tools and technologies">${project.stack.map(tool => `<span>${tool}</span>`).join('')}</div>` : ''}
-      <h3>Problem</h3><p>${project.problem}</p>
-      <h3>Implementation</h3><p>${project.build}</p>
+      <h3>The problem</h3><p>${project.problem}</p>
+      <h3>The build</h3><p>${project.build}</p>
       <div class="dialog-flow">${project.flow}</div>
-      <h3>Design decision</h3><p>${project.decision}</p>
+      <h3>A decision that matters</h3><p>${project.decision}</p>
       <h3>Evidence & limits</h3><p>${project.evidence}</p>
       <div class="dialog-links project-actions">${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener noreferrer">Live</a>` : ''}${project.linkedin ? `<a href="${project.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>` : ''}<a href="${project.repoUrl || github + project.repo}" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-      <p class="dialog-source">${project.scope}</p>`;
+      <p class="dialog-source">${project.scope} Project details are based on the linked repository documentation.</p>`;
     dialog.showModal();
     dialog.scrollTop = 0;
-  });
-});
-// Card clicks open details while links and text selection keep their usual behavior.
-document.querySelectorAll('.project-card, .more-project').forEach(card => {
-  const details = card.querySelector('.case-study');
-  card.addEventListener('click', event => {
-    if (event.target.closest('a, button') || window.getSelection()?.toString()) return;
-    details.click();
   });
 });
 document.querySelector('#close-dialog').addEventListener('click', () => dialog.close());
